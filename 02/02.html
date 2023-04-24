@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>使用jsx创建</title>
+    </head>
+    <body>
+        <!--准备一个"容器"-->
+        <div id="test"></div>
+
+        <!--引入react核心库-->
+        <script type="text/javascript" src="../js/react.development.js"></script>
+        <!--引入react-dom用于支持react操作DOM-->
+        <script type="text/javascript" src="../js/react-dom.development.js"></script>
+        
+        <script type="text/javascript">
+            //1.创建虚拟DOMReact.createElement(标签，标签名，标签内容)
+            const VDOM = React.createElement('h1',{id:'title'},'heloreact')
+            //2.渲染虚拟DOM到页面
+            ReactDOM.render(VDOM,document.getElementById('test'))
+        </script>
+    </body>
+</html>
